@@ -1,7 +1,8 @@
 import React from 'react'
+import Navbar from './Components/Navbar'
 
 const page = () => {
-  return <div></div>
+  return <Navbar />
 }
 
 export default page
