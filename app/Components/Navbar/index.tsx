@@ -8,16 +8,16 @@ const Navbar = () => {
     setNav(!nav)
   }
   return (
-    <div className="text-gray-500 flex justify-between items-center max-w-[1240px] mx-auto h-24 px-4 text-l">
+    <div className="z-10 text-gray-500 flex justify-between items-center max-w-[1240px] mx-auto h-24 px-4 text-l">
       <h1 className="text-3xl font-bold primary-color ml-4">SKOUZI</h1>
       <ul className="hidden md:flex">
-        <li className="p-2">Home</li>
-        <li className="p-2">Company</li>
-        <li className="p-2">Resources</li>
-        <li className="p-2">About</li>
-        <li className="p-2">Contact</li>
+        <li className="p-5">Home</li>
+        <li className="p-5">Company</li>
+        <li className="p-5">Resources</li>
+        <li className="p-5">About</li>
+        <li className="p-5">Contact</li>
       </ul>
-      <div onClick={handleNav} className="block md:hidden">
+      <div onClick={handleNav} className="block md:hidden /*z-10*/">
         {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
       </div>
       <div
