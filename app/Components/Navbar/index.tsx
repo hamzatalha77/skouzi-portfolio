@@ -23,8 +23,8 @@ const Navbar = () => {
       <div
         className={
           nav
-            ? 'text-gray-300 fixed h-full left-0 top-0 w-[50%] border-r border-r-gray-900 bg-[#202121]  duration-500  ease-in-out'
-            : 'fixed left-[-100%] top-0  h-full ease-in-out duration-500'
+            ? 'text-gray-300 fixed h-full left-0 top-0 w-[50%] border-r border-r-gray-900 bg-[#202121] duration-500 ease-in-out'
+            : 'fixed left-[-100%] top-0 h-full ease-in-out duration-500'
         }
       >
         <h1 className="text-3xl font-bold primary-color m-4">SKOUZI</h1>
