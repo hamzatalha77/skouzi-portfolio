@@ -3,6 +3,7 @@ import React from 'react'
 import Navbar from './Components/Navbar'
 import Hero from './Components/Hero'
 import About from './Components/About'
+import Work from './Components/Work'
 
 const page = () => {
   return (
@@ -10,6 +11,7 @@ const page = () => {
       <Navbar />
       <Hero />
       <About />
+      <Work />
     </React.Fragment>
   )
 }
