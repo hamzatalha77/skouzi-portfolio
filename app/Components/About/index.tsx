@@ -10,9 +10,10 @@ const About = () => {
             <Image
               path="skouzi/about"
               alt="about"
+              priority
               width={400}
-              height={400}
-              className="object-cover rounded-xl h-[300px] filter grayscale brightness-50"
+              height={300}
+              className="object-cover rounded-xl  h-[300px] filter grayscale brightness-50"
             />
           </div>
         </div>

@@ -13,7 +13,7 @@ const Contact = () => {
               <h1 className="text-4xl sm:text-5xl text-gray-800  font-extrabold tracking-tight">
                 Contact <span>Me</span>
               </h1>
-              <p className="text-normal text-lg sm:text-2xl font-medium text-gray-600 mt-2">
+              <p className="text-normal text-sm sm:text-2xl font-medium text-gray-600 mt-2">
                 let`s connect on Linkedin <br /> or send me an Email
               </p>
 
@@ -148,9 +148,9 @@ const Contact = () => {
                   </svg>
                 </span>
                 <span className="ease absolute flex h-full w-full transform items-center justify-center text-purple-500 transition-all duration-300 group-hover:translate-x-full">
-                  Button Text
+                  Send
                 </span>
-                <span className="invisible relative">Button Text</span>
+                <span className="invisible relative">Send</span>
               </button>
             </form>
           </div>
