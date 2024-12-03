@@ -35,10 +35,10 @@ const Hero = () => {
               with a 5+ years experience
             </p>
           </div>
-          <div className="text-5xl flex justify-start gap-16 my-7 text-[#5afe73]">
-            <AiFillLinkedin />
-            <AiFillGithub />
-            <AiFillDribbbleCircle />
+          <div className="text-5xl flex justify-start gap-16 my-7 text-[#5afe73] ">
+            <AiFillLinkedin className="hover:text-gray-200" />
+            <AiFillGithub className="hover:text-gray-200" />
+            <AiFillDribbbleCircle className="hover:text-gray-200" />
           </div>
           <div className="relative inline-flex group my-3">
             <div className="wrapper">
@@ -87,6 +87,7 @@ const Hero = () => {
           <Image
             path="skouzi/hero"
             alt="hero"
+            priority
             width={0}
             height={0}
             className="w-[300px] sm:w-[500px] mx-auto h-auto"

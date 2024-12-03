@@ -134,3 +134,23 @@ path.two {
   background-repeat: repeat-x;
   text-decoration: none;
 }
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .cta {
+    padding: 5px 15px;
+    font-size: 20px;
+  }
+
+  span:nth-child(2) {
+    width: 15px;
+    margin-left: 30px;
+    top: 0%;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .cta {
+    font-size: 25px;
+  }
+}
