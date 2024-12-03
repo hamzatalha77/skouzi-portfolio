@@ -1,6 +1,7 @@
-import Link from 'next/link'
+import { Link } from 'react-scroll'
 import React, { useState } from 'react'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
+import ThemeSwitch from '../ThemeSwitch'
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
@@ -12,13 +13,59 @@ const Navbar = () => {
     <div className="z-10 text-gray-500 flex justify-between items-center max-w-[1240px] mx-auto h-24 px-4 text-l">
       <h1 className="text-3xl font-bold primary-color ml-4">SKOUZI</h1>
       <ul className="hidden md:flex">
-        <li className="p-5"> Home</li>
         <li className="p-5">
-          <Link href="#about">About</Link>
+          <Link
+            to="hero"
+            className="cursor-pointer"
+            smooth={true}
+            duration={500}
+          >
+            Home
+          </Link>
         </li>
-        <li className="p-5">Work</li>
-        <li className="p-5">Experience</li>
-        <li className="p-5">Contact</li>
+        <li className="p-5">
+          <Link
+            to="about"
+            className="cursor-pointer"
+            smooth={true}
+            duration={500}
+          >
+            About
+          </Link>
+        </li>
+        <li className="p-5">
+          <Link
+            to="work"
+            className="cursor-pointer"
+            smooth={true}
+            duration={500}
+          >
+            Work
+          </Link>
+        </li>
+        <li className="p-5">
+          <Link
+            to="experience"
+            className="cursor-pointer"
+            smooth={true}
+            duration={500}
+          >
+            Experience
+          </Link>
+        </li>
+        <li className="p-5">
+          <Link
+            to="contact"
+            className="cursor-pointer"
+            smooth={true}
+            duration={500}
+          >
+            Contact
+          </Link>
+        </li>
+        <li className="p-5">
+          <ThemeSwitch />
+        </li>
       </ul>
       <div onClick={handleNav} className="block md:hidden /*z-10*/">
         {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
@@ -32,11 +79,56 @@ const Navbar = () => {
       >
         <h1 className="text-3xl font-bold primary-color m-4">SKOUZI</h1>
         <ul className="p-8 text-2xl">
-          <li className="p-2">Home</li>
-          <li className="p-2">About</li>
-          <li className="p-2">Work</li>
-          <li className="p-2">Experience</li>
-          <li className="p-2">Contact</li>
+          <li className="p-2">
+            <Link
+              to="hero"
+              className="cursor-pointer"
+              smooth={true}
+              duration={500}
+            >
+              Home
+            </Link>
+          </li>
+          <li className="p-2">
+            <Link
+              to="about"
+              className="cursor-pointer"
+              smooth={true}
+              duration={500}
+            >
+              About
+            </Link>
+          </li>
+          <li className="p-2">
+            <Link
+              to="work"
+              className="cursor-pointer"
+              smooth={true}
+              duration={500}
+            >
+              Work
+            </Link>
+          </li>
+          <li className="p-2">
+            <Link
+              to="experience"
+              className="cursor-pointer"
+              smooth={true}
+              duration={500}
+            >
+              Experience
+            </Link>
+          </li>
+          <li className="p-2">
+            <Link
+              to="contact"
+              className="cursor-pointer"
+              smooth={true}
+              duration={500}
+            >
+              Contact
+            </Link>
+          </li>
         </ul>
       </div>
     </div>
