@@ -4,7 +4,7 @@ import React from 'react'
 
 const Work = () => {
   return (
-    <section className="py-6 max-w-[1200px] mx-auto">
+    <section className="py-6 max-w-[1200px] mx-auto" id="Work">
       <div className="mx-auto px-4 md:px-8">
         <div className="mb-4 flex items-center justify-between gap-8">
           <div className="flex flex-col gap-4">

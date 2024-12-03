@@ -2,16 +2,19 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <section className="relative my-5 h-full sm:h-[70vh] flex items-top justify-center sm:items-center sm:pt-0">
+    <section
+      className="relative my-5 h-full sm:h-[70vh] flex items-top justify-center sm:items-center sm:pt-0"
+      id="contact"
+    >
       <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
         <div className="mt-8 overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="p-6 mr-2 bg-gray-100 sm:rounded-lg">
               <h1 className="text-4xl sm:text-5xl text-gray-800  font-extrabold tracking-tight">
-                Get in touch
+                Contact <span>Me</span>
               </h1>
               <p className="text-normal text-lg sm:text-2xl font-medium text-gray-600 mt-2">
-                Fill in the form to start a conversation
+                let`s connect on Linkedin <br /> or send me an Email
               </p>
 
               <div className="flex items-center mt-8 text-gray-600">
@@ -126,7 +129,7 @@ const Contact = () => {
                   className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400  text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
                 />
               </div>
-
+              <br />
               <button className="group relative inline-flex items-center justify-center overflow-hidden border-2 border-purple-500 p-4 px-6 py-3 font-medium text-indigo-600 shadow-md transition duration-300 ease-out hover:border-4 hover:border-double">
                 <span className="ease absolute inset-0 flex h-full w-full -translate-x-full items-center justify-center bg-purple-500 text-white duration-300 group-hover:translate-x-0">
                   <svg
@@ -137,9 +140,9 @@ const Contact = () => {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M14 5l7 7m0 0l-7 7m7-7H3"
                     ></path>
                   </svg>

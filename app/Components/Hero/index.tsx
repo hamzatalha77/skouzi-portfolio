@@ -9,13 +9,13 @@ import {
 import { TypeAnimation } from 'react-type-animation'
 const Hero = () => {
   return (
-    <section>
-      <div className="my-7 sm:my-0 max-w-[1200px] h-[80vh] mx-auto flex flex-col-reverse sm:flex-row justify-center align-center">
+    <section id="hero">
+      <div className="my-7 sm:my-0 max-w-[1200px] h-screen mx-auto flex flex-col-reverse sm:flex-row justify-center align-center">
         <div className="flex-col my-auto mx-auto">
           <p className="md:text-5xl sm:text-4xl text-xl font-bold text-gray-200">
             Hi! I am Othmane Rafik
           </p>
-          <h1 className="md:text-7xl sm:text-6xl text-4xl font-bold md:py-6">
+          <h1 className="md:text-6xl sm:text-5xl text-4xl font-bold md:py-6">
             <TypeAnimation
               sequence={[
                 'Frontend Dev',
