@@ -3,8 +3,8 @@ import React from 'react'
 const Experience = () => {
   return (
     <section id="experience">
-      <div className="py-10">
-        <h2 className="mb-8 text-3xl text-white text-center">
+      <div className="py-10 ">
+        <h2 className="mb-8 text-3xl text-gray-300 text-center">
           My <span>Experience</span>
         </h2>
 

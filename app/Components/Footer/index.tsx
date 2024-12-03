@@ -8,7 +8,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="mt-2 w-max-[800px] border-t border-gray-500 text-center">
+    <footer className="mt-2 w-max-[800px] border-t border-gray-500 text-center ">
       <p className="my-5 text-gray-500">
         ©Skouzi 2024, <br />
         All rights reserved.

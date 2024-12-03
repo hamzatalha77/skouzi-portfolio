@@ -10,13 +10,13 @@ const Navbar = () => {
     setNav(!nav)
   }
   return (
-    <div className="z-10 text-gray-500 flex justify-between items-center max-w-[1240px] mx-auto h-24 px-4 text-l">
+    <div className="z-10 text-gray-500 flex justify-between items-center max-w-[1240px] mx-auto h-24 px-4 text-l  ">
       <h1 className="text-3xl font-bold primary-color ml-4">SKOUZI</h1>
       <ul className="hidden md:flex">
-        <li className="p-5">
+        <li className="p-5 ">
           <Link
             to="hero"
-            className="cursor-pointer"
+            className="cursor-pointer links"
             smooth={true}
             duration={500}
           >
@@ -26,7 +26,7 @@ const Navbar = () => {
         <li className="p-5">
           <Link
             to="about"
-            className="cursor-pointer"
+            className="cursor-pointer links"
             smooth={true}
             duration={500}
           >
@@ -36,7 +36,7 @@ const Navbar = () => {
         <li className="p-5">
           <Link
             to="work"
-            className="cursor-pointer"
+            className="cursor-pointer links"
             smooth={true}
             duration={500}
           >
@@ -46,7 +46,7 @@ const Navbar = () => {
         <li className="p-5">
           <Link
             to="experience"
-            className="cursor-pointer"
+            className="cursor-pointer links"
             smooth={true}
             duration={500}
           >
@@ -56,7 +56,7 @@ const Navbar = () => {
         <li className="p-5">
           <Link
             to="contact"
-            className="cursor-pointer"
+            className="cursor-pointer links"
             smooth={true}
             duration={500}
           >

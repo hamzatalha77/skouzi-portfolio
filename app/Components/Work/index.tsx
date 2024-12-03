@@ -8,7 +8,7 @@ const Work = () => {
       <div className="mx-auto px-4 md:px-8">
         <div className="mb-4 flex items-center justify-between gap-8">
           <div className="flex flex-col gap-4">
-            <h2 className="text-2xl lg:text-3xl text-white">
+            <h2 className="text-2xl lg:text-3xl text-gray-300">
               My <span>Projects</span>
             </h2>
             <p className="text-gray-500">
