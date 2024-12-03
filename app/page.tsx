@@ -5,6 +5,7 @@ import Hero from './Components/Hero'
 import About from './Components/About'
 import Work from './Components/Work'
 import Experience from './Components/Experience'
+import Contact from './Components/Contact'
 
 const page = () => {
   return (
@@ -14,6 +15,7 @@ const page = () => {
       <About />
       <Work />
       <Experience />
+      <Contact />
     </React.Fragment>
   )
 }

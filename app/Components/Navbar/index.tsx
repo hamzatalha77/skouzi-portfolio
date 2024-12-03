@@ -12,9 +12,9 @@ const Navbar = () => {
       <h1 className="text-3xl font-bold primary-color ml-4">SKOUZI</h1>
       <ul className="hidden md:flex">
         <li className="p-5">Home</li>
-        <li className="p-5">Company</li>
-        <li className="p-5">Resources</li>
         <li className="p-5">About</li>
+        <li className="p-5">Work</li>
+        <li className="p-5">Experience</li>
         <li className="p-5">Contact</li>
       </ul>
       <div onClick={handleNav} className="block md:hidden /*z-10*/">
@@ -30,9 +30,9 @@ const Navbar = () => {
         <h1 className="text-3xl font-bold primary-color m-4">SKOUZI</h1>
         <ul className="p-8 text-2xl">
           <li className="p-2">Home</li>
-          <li className="p-2">Company</li>
-          <li className="p-2">Resources</li>
           <li className="p-2">About</li>
+          <li className="p-2">Work</li>
+          <li className="p-2">Experience</li>
           <li className="p-2">Contact</li>
         </ul>
       </div>
