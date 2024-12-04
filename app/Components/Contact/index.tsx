@@ -1,14 +1,76 @@
 import React from 'react'
-
+import { useState } from 'react'
+import emailjs from '@emailjs/browser'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 const Contact = () => {
+  const [loading, setLoading] = useState(false)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [emailSent, setEmailSent] = useState(false)
+  const [formData, setFormData] = useState({
+    from_name: '',
+    to_name: '',
+    message: ''
+  })
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleInputChange = (e: any) => {
+    const { name, value } = e.target
+    setFormData({
+      ...formData,
+      [name]: value
+    })
+  }
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const sendEmail = (e: any) => {
+    e.preventDefault()
+    setLoading(true)
+    if (!formData.from_name || !formData.to_name || !formData.message) {
+      toast.error('Please fill in all fields')
+      setLoading(false)
+      return
+    }
+    emailjs
+      .sendForm(
+        'service_dwdjncv',
+        'template_o4tbf5g',
+        e.target,
+        'BZSXfUU-iJjQFFcpH'
+      )
+      .then(
+        (result) => {
+          console.log(result.text)
+          setEmailSent(true)
+          setFormData({
+            from_name: '',
+            to_name: '',
+            message: ''
+          })
+          toast.success('Email sent successfully', {
+            position: 'bottom-left'
+          })
+        },
+        (error) => {
+          console.log(error.text)
+          setEmailSent(false)
+          toast.error('Email sending failed', {
+            position: 'bottom-left'
+          })
+        }
+      )
+      .finally(() => {
+        setLoading(false)
+      })
+  }
   return (
     <section
       className="relative my-5 h-full sm:h-[70vh] flex items-top justify-center sm:items-center sm:pt-0  "
       id="contact"
     >
+      <ToastContainer />
       <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
         <div className="mt-8 overflow-hidden">
-          <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="p-6 mr-2 bg-gray-100 sm:rounded-lg">
               <h1 className="text-4xl sm:text-5xl text-gray-800  font-extrabold tracking-tight">
                 Contact <span>Me</span>
@@ -90,49 +152,45 @@ const Contact = () => {
               </div>
             </div>
 
-            <form className="p-6 flex flex-col justify-center">
+            <form
+              onSubmit={sendEmail}
+              className="p-6 flex flex-col justify-center"
+            >
               <div className="flex flex-col">
-                <label htmlFor="name" className="hidden">
-                  Full Name
-                </label>
                 <input
-                  type="name"
-                  name="name"
-                  id="name"
+                  type="text"
                   placeholder="Full Name"
+                  name="from_name"
+                  value={formData.from_name}
+                  onChange={handleInputChange}
                   className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400  text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
                 />
               </div>
 
               <div className="flex flex-col mt-2">
-                <label htmlFor="email" className="hidden">
-                  Email
-                </label>
                 <input
                   type="email"
-                  name="email"
-                  id="email"
                   placeholder="Email"
+                  name="to_name"
+                  value={formData.to_name}
+                  onChange={handleInputChange}
                   className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400  text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
                 />
               </div>
 
               <div className="flex flex-col mt-2">
-                <label htmlFor="tel" className="hidden">
-                  Number
-                </label>
-                <input
-                  type="tel"
-                  name="tel"
-                  id="tel"
-                  placeholder="Telephone Number"
+                <textarea
+                  name="message"
+                  placeholder="Message"
+                  value={formData.message}
+                  onChange={handleInputChange}
                   className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400  text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
-                />
+                ></textarea>
               </div>
               <br />
               <div className="wrapper">
-                <a className="cta" href="#">
-                  <span>SEND</span>
+                <button className="cta">
+                  <span> {loading ? 'Sending...' : 'SEND'}</span>
                   <span>
                     <svg
                       width="66px"
@@ -167,7 +225,7 @@ const Contact = () => {
                       </g>
                     </svg>
                   </span>
-                </a>
+                </button>
               </div>
             </form>
           </div>
