@@ -75,8 +75,8 @@ const Contact = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <motion.div
               variants={fadeIn('left', 0.8) as unknown as Variants}
-              initial={{ opacity: 0, y: 75 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: 75 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.48 }}
               className="p-6 mr-2 bg-gray-100 sm:rounded-lg"
@@ -163,8 +163,8 @@ const Contact = () => {
 
             <motion.form
               variants={fadeIn('right', 0.8) as unknown as Variants}
-              initial={{ opacity: 0, y: 75 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: 75 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.48 }}
               onSubmit={sendEmail}
