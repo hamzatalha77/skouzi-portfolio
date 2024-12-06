@@ -3,6 +3,8 @@ import { useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { motion, Variants } from 'framer-motion'
+import { fadeIn } from '@/app/utils/variants'
 const Contact = () => {
   const [loading, setLoading] = useState(false)
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -71,7 +73,14 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
         <div className="mt-8 overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-6 mr-2 bg-gray-100 sm:rounded-lg">
+            <motion.div
+              variants={fadeIn('left', 0.8) as unknown as Variants}
+              initial={{ opacity: 0, y: 75 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.48 }}
+              className="p-6 mr-2 bg-gray-100 sm:rounded-lg"
+            >
               <h1 className="text-4xl sm:text-5xl text-gray-800  font-extrabold tracking-tight">
                 Contact <span>Me</span>
               </h1>
@@ -150,9 +159,14 @@ const Contact = () => {
                   info@acme.org
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <form
+            <motion.form
+              variants={fadeIn('right', 0.8) as unknown as Variants}
+              initial={{ opacity: 0, y: 75 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.48 }}
               onSubmit={sendEmail}
               className="p-6 flex flex-col justify-center"
             >
@@ -227,7 +241,7 @@ const Contact = () => {
                   </span>
                 </button>
               </div>
-            </form>
+            </motion.form>
           </div>
         </div>
       </div>
