@@ -24,10 +24,11 @@ const About = () => {
                 About <span className="primary-text">Me</span>
               </h3>
               <p className="text-justify leading-7 w-11/12 mx-auto">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque
-                minus commodi doloribus dignissimos delectus vel quisquam id
-                voluptate dolor magni mollitia ab, odit, nostrum similique eaque
-                placeat! Nulla, recusandae officia!
+                🌐✨ Transform your web content using Framer Motions UTF-16
+                powered text animations. Each character, a vibrant performer,
+                dances dynamically, weaving a captivating narrative. Elevate
+                user engagement with the art of animated storytelling. 🚀🎉
+                #WebDev #Animation
               </p>
             </div>
           </div>

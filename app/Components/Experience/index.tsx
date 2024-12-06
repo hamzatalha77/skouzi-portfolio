@@ -1,4 +1,6 @@
 import React from 'react'
+import { motion, Variants } from 'framer-motion'
+import { fadeIn } from '@/app/utils/variants'
 
 const Experience = () => {
   return (
@@ -8,13 +10,20 @@ const Experience = () => {
           My <span>Experience</span>
         </h2>
 
-        <div className="mb-[20px] text-white bg-gray-700/20 p-4 rounded-3xl max-w-[300px] sm:max-w-[600px] mx-auto">
+        <motion.div
+          variants={fadeIn('up', 0.2) as unknown as Variants}
+          initial={{ opacity: 0, y: 75 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.25 }}
+          className="mb-[20px] text-white bg-gray-700/20 p-4 rounded-3xl max-w-[300px] sm:max-w-[600px] mx-auto"
+        >
           <p>First company</p>
           <p className="text-gray-400">(2020 - present)</p>
           <p className="text-gray-500">
             Description of your experience in this company
           </p>
-        </div>
+        </motion.div>
         <div className="h-[50px] w-[2px] bg-slate-400  my-1 mx-auto"></div>
         <div className="mb-[20px] text-white  bg-gray-700/20 p-4 rounded-3xl max-w-[300px] sm:max-w-[600px] mx-auto">
           <p>First company</p>
