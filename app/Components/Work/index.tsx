@@ -1,7 +1,8 @@
 import Image from '@/app/utils/Image'
 import Link from 'next/link'
 import React from 'react'
-
+import { motion, Variants } from 'framer-motion'
+import { fadeIn } from '@/app/utils/variants'
 const Work = () => {
   return (
     <section className="py-6 max-w-[1200px] mx-auto" id="work">
@@ -17,7 +18,12 @@ const Work = () => {
           </div>
         </div>
         <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 md:gap-6 xl:gap-8">
-          <Link
+          <motion.a
+            variants={fadeIn('right', 0.2) as unknown as Variants}
+            initial={{ opacity: 0, x: 75 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.25 }}
             href="/"
             className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
           >
@@ -29,7 +35,7 @@ const Work = () => {
               className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to to-transparent opacity-50"></div>
-          </Link>
+          </motion.a>
           <Link
             href="/"
             className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
