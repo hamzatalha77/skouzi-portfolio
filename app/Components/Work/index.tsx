@@ -36,7 +36,12 @@ const Work = () => {
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to to-transparent opacity-50"></div>
           </motion.a>
-          <Link
+          <motion.a
+            variants={fadeIn('left', 0.2) as unknown as Variants}
+            initial={{ opacity: 0, x: 75 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.25 }}
             href="/"
             className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
           >
@@ -48,7 +53,7 @@ const Work = () => {
               className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to to-transparent opacity-50"></div>
-          </Link>
+          </motion.a>
           <Link
             href="/"
             className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
